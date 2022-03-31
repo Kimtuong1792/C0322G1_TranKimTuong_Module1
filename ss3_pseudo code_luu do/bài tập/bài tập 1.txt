@@ -1,0 +1,6 @@
+BÀI TẬP 1: tính điểm trung bình toán, lí, hoá
+BEGIN
+	INPUT Math, Physics, Chemistry
+		C = (math + Physics + Chemistry) / 3
+	DISPLAY C
+END
