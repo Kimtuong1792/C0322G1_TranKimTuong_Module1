@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi tiền</title>
+</head>
+<body>
+
+<table cellspacing="50px">
+    <tr>
+        <td><label> Amount </label><br><input type="text" id="dauvao"></td>
+        <td><label> From Currency</label><br>
+            <select name="currency" id="money1">
+                <option value="b">USD</option>
+                <option value="a">VNĐ</option>
+            </select>
+        </td>
+        <td></td>
+        <td><label>To Currency</label><br>
+            <select name="to Currency" id="money2">
+                <option value="a">VNĐ</option>
+                <option value="b">USD</option>
+            </select>
+        </td>
+        <td><label> </label><br>
+            <button onclick="Change()">convert
+        </td>
+    </tr>
+</table>
+<p style="color: blue">Result: <span id="result"></span></p>
+
+
+<script>
+    function Change() {
+        let giatri = document.getElementById("dauvao").value;
+        let money1 = document.getElementById("money1").value;
+        let money2 = document.getElementById("money2").value;
+        if (money1 == money2) {
+           document.getElementById('result').innerHTML = giatri;
+
+        }
+        if (money1 == "a" && money2 == "b") {
+            document.getElementById('result').innerText = giatri / 23000;
+        }
+        if (money1 == "b" && money2 == "a") {
+            document.getElementById('result').innerText = giatri * 23000;
+        }
+    }
+</script>
+
+</body>
+</html>

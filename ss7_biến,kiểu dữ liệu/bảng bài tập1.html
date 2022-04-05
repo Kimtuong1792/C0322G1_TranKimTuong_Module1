@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập biến</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><label> Điểm lí</label><br><input id="li" type="number"></td>
+       <td><label> Điểm Hoá></label><br><input id="hoa" type="number"></td>
+         <td><label> Điểm Sinh</label><br><input id="sinh" type="number"></td>
+        <td><label> Điểm Trung Bình</label><br><input id= "dtb" type="number" onclick ="tinhtong()" readonly></td>
+    </tr>
+</table>
+<script>
+
+    function tinhtong() {
+    let a = parseInt(document.getElementById("li").value);
+    let b = parseInt(document.getElementById("hoa").value);
+    let c = parseInt(document.getElementById("sinh").value);
+    let d = (a + b + c)/3;
+    document.getElementById("dtb").value= d;
+    }
+
+</script>
+<table>
+    <tr>
+        <td><label> Độ C</label><br><input id="C" type="number" onkeydown="ketqua()"></td>
+        <td><label> Độ F</label><br><input id="F" type="number"></td>
+
+    </tr>
+</table>
+<script>
+    function ketqua(){
+        let e = parseInt(document.getElementById("C").value);
+        let g = (e*9)/5 + 32;
+        document.getElementById("F").value= g;
+    }
+</script>
+<table>
+    <tr>
+        <td><label>Bán kính</label><br><input id="Bankinh" type="number" onkeydown="tinhdientich()" </td>
+        <td><label> Diện tích</label><br><input id="dientich" type="number" ></td>
+        <td><label> Chu Vi</label><br><input id="chuvi" type="number"></td>
+    </tr>
+</table>
+<script>
+    function tinhdientich(){
+        let R = parseInt(document.getElementById("Bankinh").value);
+        let S = 3.14 *( R * R)
+        let Y = 2 * R * 3.14
+        document.getElementById("dientich").value=S;
+        document.getElementById("chuvi").value=Y;
+    }
+</script>
+
+</body>
+</html>

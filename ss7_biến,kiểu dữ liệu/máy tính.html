@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ung dung may tinh</title>
+</head>
+<body>
+<h3> Caculator </h3>
+        <input type="number" id="number1">
+        <input type="number" id="number2">
+        <br>
+
+        <button onclick="ketqua('add')"> Addition(+)</button>
+        <button onclick="ketqua('sub')"> Subtraction(-)</button>
+        <button onclick="ketqua('mul')">Multiplication(X)</button>
+        <button onclick="ketqua('div')"> Division(/)</button>
+
+<p style="color: blue">Result: <span id="result"></span></p>
+<script>
+    function ketqua(i){
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        if(i === "add"){
+            let Addition = a+b;
+            document.getElementById('result').innerHTML =Addition;
+        }
+        else if(i === "sub"){
+            let Subtraction = a-b;
+            document.getElementById('result').innerHTML =Subtraction;
+
+        }
+        else if(i === "mul"){
+            let Multiplication = a*b;
+            document.getElementById('result').innerHTML =Multiplication;
+        }
+        else if(i === "div"){
+            let Division = a/b;
+            document.getElementById('result').innerHTML = Division;
+        }
+
+      }
+</script>
+
+
+
+</body>
+</html>
