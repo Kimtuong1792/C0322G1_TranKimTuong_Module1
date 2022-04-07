@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th> Điểm kiểm tra</th>
+        <th> Điểm thi giữa kỳ</th>
+        <th> Điểm thi cuối kỳ</th>
+        <th> Điểm trung bình</th>
+        <th> Xếp hạng</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="point1"></td>
+        <td><input type="number" id="point2"></td>
+        <td><input type="number" id="point3"></td>
+        <td><input type="number" id="ĐTB"></td>
+        <td><p id="ketqua"></p></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketqua()" style="color: red"> kết quả</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function ketqua() {
+        let a = parseInt(document.getElementById('point1').value);
+        let b = parseInt(document.getElementById('point2').value);
+        let c = parseInt(document.getElementById('point3').value);
+        document.getElementById('ĐTB').value = (a + b * 2 + c * 3) / 6;
+        if (document.getElementById('ĐTB').value < 5) {
+            document.getElementById("ketqua").innerHTML = "<span style='color: red'> Loại yếu </span>"
+        } else if (document.getElementById('ĐTB').value < 6) {
+            document.getElementById("ketqua").innerText = " loại TB"
+        } else if (document.getElementById('ĐTB').value < 8) {
+            document.getElementById("ketqua").innerText = " Loại khá"
+        } else {
+            document.getElementById("ketqua").innerText = " loại giỏi"
+        }
+    }
+
+
+</script>
+
+<p>
+</p>
+
+
+</body>
+</html>

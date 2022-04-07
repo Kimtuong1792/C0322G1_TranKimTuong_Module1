@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ độ C sang độ F</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><label> Độ C</label><br><input id="C" type="number" onkeydown="ketqua()"></td>
+        <td><label> Độ F</label><br><input id="F" type="number"></td>
+
+    </tr>
+</table>
+<script>
+    function ketqua(){
+        let e = parseInt(document.getElementById("C").value);
+        let g = (e*9)/5 + 32;
+        document.getElementById("F").value= g;
+    }
+</script>
+
+</body>
+</html>

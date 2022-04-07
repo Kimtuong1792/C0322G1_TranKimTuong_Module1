@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><label> Cạnh a</label><br><input id="canha" type="number"></td>
+        <td><label>Cạnh b</label><br><input id="canhb" type="number" onkeydown="tinhdientich()"></td>
+        <td><label> Diện tích</label><br><input id="dientich" type="number" ></td>
+        <td><label> Chu Vi</label><br><input id="chuvi" type="number"></td>
+    </tr>
+</table>
+<script>
+    function tinhdientich(){
+        let a = parseInt(document.getElementById("canha").value);
+        let b = parseInt(document.getElementById("canhb").value);
+        let S = a*b
+        let Y = (a+b)*2
+        document.getElementById("dientich").value=S;
+        document.getElementById("chuvi").value=Y;
+    }
+</script>
+
+</body>
+</html>

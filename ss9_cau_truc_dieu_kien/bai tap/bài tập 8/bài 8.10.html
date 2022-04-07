@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Viết chương trình tính giá điện</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("nhập số chữ điện"));
+    const B1 = 1.678
+    const B2 = 1.734
+    const B3 = 2.014
+    const B4 = 2.536
+    const B5 = 2.834
+    const B6 = 2.927
+    if(a<=0){
+        alert("vui lòng nhập lại số điện")}
+    else if (a<100){
+            let tienDien = (a*B1)
+            alert(tienDien)}
+    else if (a<=200){
+        let tiendien = (a-100)*B2 +(100*B1)
+        alert(tiendien)
+    }
+</script>
+
+
+
+</body>
+</html>

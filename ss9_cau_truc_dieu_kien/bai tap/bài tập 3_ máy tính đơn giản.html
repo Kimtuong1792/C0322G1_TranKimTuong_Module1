@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+        button {
+            width: 50px; height: 50px;
+        }
+        td {
+            border: black 2px solid;
+        }
+    </style>
+</head>
+<body>
+<table  align="center"  style="border: black 4px solid" >
+    <tr>
+        <td colspan="4" ><input type="text" id="kq" style="height: 40px; width: 220px" ></td>
+    </tr>
+    <tr>
+        <td><button value="1" onclick="nhap(1)">1</button></td>
+        <td><button value="2" onclick="nhap(2)">2</button></td>
+        <td><button value="3" onclick="nhap(3)">3</button></td>
+        <td><button value="+" onclick="nhap(this.value)">+</button></td>
+    </tr>
+    <tr>
+        <td><button value="4" onclick="nhap(4)">4</button></td>
+        <td><button value="5" onclick="nhap(5)">5</button></td>
+        <td><button value="6" onclick="nhap(6)">6</button></td>
+        <td><button value="-" onclick="nhap(this.value)">-</button></td>
+    </tr>
+    <tr>
+        <td><button value="7" onclick="nhap(7)">7</button></td>
+        <td><button value="8" onclick="nhap(8)">8</button></td>
+        <td><button value="9" onclick="nhap(9)">9</button></td>
+        <td><button value="*" onclick="nhap(this.value)">*</button></td>
+    </tr>
+    <tr>
+        <td><button value="clear" onclick="remove()">C</button></td>
+        <td><button value="0" onclick="nhap(0)">0</button></td>
+        <td><button value="=" onclick="bang()">=</button></td>
+        <td><button value="/" onclick="nhap(this.value)">/</button></td>
+    </tr>
+</table>
+<script>
+    function nhap(num) {
+        document.getElementById("kq").value = document.getElementById("kq").value + num;
+    }
+    function bang() {
+        let gt = document.getElementById("kq").value;
+        document.getElementById("kq").value=eval(gt);
+
+    }
+    function remove(){
+        document.getElementById("kq").value='';
+    }
+</script>
+
+</body>
+</html>

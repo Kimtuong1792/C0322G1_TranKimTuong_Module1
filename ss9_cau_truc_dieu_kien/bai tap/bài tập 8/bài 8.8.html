@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi
+        nhỏ 120 và lơn hơn 0.</title>
+</head>
+<body>
+<input type="number" id="age">
+<button onclick="check()"> Kiểm tra</button>
+<p id="check"><span></span></p>
+<script>
+    function check() {
+        let a = parseInt(document.getElementById("age").value);
+        if (a > 0 && a < 120)
+            document.getElementById("check").innerHTML = "Tuổi của bạn là = " + a;
+        else {
+            alert("nhập lại số tuổi đúng")
+        }
+    }
+</script>
+</body>
+</html>

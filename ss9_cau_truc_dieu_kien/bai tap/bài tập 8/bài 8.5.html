@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><label> Cạnh kề a</label><br><input id="canh a" type="number" onkeydown="tinhdientich()"></td>
+        <td><label>Cạnh kề b</label><br><input id="canh b" type="number" onkeydown="tinhdientich()"></td>
+        <td><label> Diện tích</label><br><input id="dientich" type="number" ></td>
+           </tr>
+</table>
+<script>
+    function tinhdientich(){
+        let a = parseInt(document.getElementById("canh a").value);
+        let b = parseInt(document.getElementById("canh b").value);
+        let S = 1/2*(a*b)
+        document.getElementById("dientich").value=S;
+
+    }
+</script>
+
+</body>
+</html>

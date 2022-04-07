@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ mét sang feet:</title>
+</head>
+<body>
+<table>
+<tr>
+    <td><label> nhập số met</label><br><input id="M" type="number" onkeydown="ketqua()"></td>
+    <td><label> số feet</label><br><input id="Ft" type="number"></td>
+
+</tr>
+</table>
+<script>
+    function ketqua(){
+        let E = parseInt(document.getElementById("M").value);
+        const i = 3.2808
+        let g = E *i
+        document.getElementById("Ft").value= g;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let arg1 = parseInt(prompt("nhap so a"));
+    let arg2 = parseInt(prompt("nhap so b"));
+    let arg3 = parseInt(prompt("nhap so c"));
+    if (arg1 === arg2 && arg1 === arg3) {
+        console.log(-1)
+    } else if (arg1 === arg2 && arg1 > arg3){
+        console.log(arg3)
+    } else if (arg1 === arg2 && arg1 < arg3) {
+        console.log(arg1)
+    } else if (arg1 === arg3 && arg1 > arg2) {
+        console.log(arg2)
+    } else if (arg1 === arg3 && arg1 < arg2) {
+        console.log(arg1)
+    } else if (arg3 === arg2 && arg1 > arg2) {
+        console.log(arg2)
+    } else if (arg3 === arg2 && arg1 < arg2) {
+        console.log(arg1)
+    } else if (arg1 > arg2 && arg1 < arg3) {
+        console.log(arg1)
+    } else if (arg1 < arg2 && arg1 > arg3) {
+        console.log(arg1)
+    } else if (arg1 < arg2 && arg2 < arg3) {
+        console.log(arg2)
+    } else if (arg3 < arg2 && arg1 > arg2) {
+        console.log(arg2)
+    } else if (arg1 < arg3 && arg2 > arg3) {
+        console.log(arg3)
+    } else if (arg3 > arg2 && arg1 > arg3) {
+        console.log(arg3)
+    }
+</script>
+
+
+</body>
+</html>

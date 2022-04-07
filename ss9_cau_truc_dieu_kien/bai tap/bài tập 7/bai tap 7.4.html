@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim gia tri lon nhat</title>
+</head>
+<body>
+<input type="number" id="a">
+<input type="number" id="b">
+<input type="number" id="c">
+<button onclick="ketqua()">kết quả</button>
+<p><span id="ketqua"></span></p>
+
+<script>
+    function ketqua() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let c = parseInt(document.getElementById("c").value);
+        let max = a
+        if (b > max) {
+            max = b;
+        }
+
+        if( c > max){
+            max = c
+        }
+        document.getElementById("ketqua").innerHTML = max;
+    }
+
+</script>
+
+</body>
+</html>

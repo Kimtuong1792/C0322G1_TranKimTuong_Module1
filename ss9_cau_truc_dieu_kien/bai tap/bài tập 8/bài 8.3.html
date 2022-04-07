@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông khi biết cạnh a</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><label>cạnh</label><br><input id="canh" type="number" onkeydown="tinhdientich()" </td>
+        <td><label> Diện tích</label><br><input id="dientich" type="number" ></td>
+        <td><label> Chu Vi</label><br><input id="chuvi" type="number"></td>
+    </tr>
+</table>
+<script>
+    function tinhdientich(){
+        let a = parseInt(document.getElementById("canh").value);
+        let S = a*a
+        let Y = a*4
+        document.getElementById("dientich").value=S;
+        document.getElementById("chuvi").value=Y;
+    }
+</script>
+
+</body>
+</html>

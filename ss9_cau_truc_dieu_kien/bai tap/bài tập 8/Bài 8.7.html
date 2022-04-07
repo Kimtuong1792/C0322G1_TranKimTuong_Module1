@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2.</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("input a"));
+    let b = parseInt(prompt("input b"));
+    let c = parseInt(prompt("input c"));
+    let d = (-b) / (2 * a);
+    let detal = b * b - (4 * a * c);
+    if(a!=0){
+    if (detal < 0) {
+        alert("phương trình bật 2 vô nghiệm")
+    }
+    if (detal === 0) {
+        alert("Phươmg trình bật 2 có 2 nghiệm kép =" + d)
+    }
+    if (detal > 0) {
+        alert("phương trình có 2 nghiệm phân biệt x1=" + ((-b + Math.sqrt(detal)) / (2 * a))
+            + "x2=" + ((-b + Math.sqrt(detal)) / (2 * a)))
+
+    }}
+    else {
+        alert("trở thành pt bật 1")
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<label> Nhập số a</label> <input id="so a" type="number"><br><br>
+<label> Nhập số b</label> <input id="so b" type="number"><br><br>
+
+<button onclick="count()"> tính toán</button>
+<p><span id="ketqua"> </span></p>
+<script>
+    function count() {
+        let a = parseInt(document.getElementById("so a").value);
+        let b = parseInt(document.getElementById("so b").value);
+
+        if (a == 0 && b == 0) {
+            document.getElementById("ketqua").innerText = "phương trình vô số nghiệm";
+        } else if (a == 0 && b != 0) {
+            document.getElementById("ketqua").innerText = " phương trình vô nghiệm";
+        } else {
+            document.getElementById("ketqua").innerText = (-b) / a;
+        }
+
+    }
+</script>
+</body>
+</html>
