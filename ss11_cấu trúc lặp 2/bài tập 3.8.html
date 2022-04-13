@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick="number()"> bắt đầu chơi</button>
+<script>
+    function number() {
+        let num1 = parseInt(prompt("số bạn muốn đoán trong khoảng từ : "));
+        let num2 = parseInt(prompt("số bạn muốn đoán đến"));
+        let x = Math.floor(Math.random() * num2) + num1;
+        console.log(x);
+        let i = 0;
+
+        while (i < 3) {
+            let guess = parseInt(prompt("số bạn dự đoán là"));
+            if (guess === x) {
+                alert("chúc mừng bạn đã đoán đúng");
+                break;
+            }
+            if (guess > x) {
+                alert("số bạn đoán lớn hơn số ngẫu nhiên");
+                i++;
+
+            } else {
+                alert("số bạn đoán nhỏ hơn số ngẫu nhiên");
+                i++;
+
+            }
+            if(x)
+
+
+        }
+
+    }
+
+
+</script>
+
+</body>
+</html>
