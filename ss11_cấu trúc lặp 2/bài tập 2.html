@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên tố</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("nhập giá trị cần kiểm tra"));
+    let count1 = 0
+    let n = 2
+    while (count1 < number){
+        let count=0
+        for(i=n;i>0;i--)
+            if(n%i==0){
+                count++
+            }
+        if (count==2){
+            document.write( n + "<br>")
+            count1++}
+            n++
+
+
+
+    }
+</script>
+
+</body>
+</html>
