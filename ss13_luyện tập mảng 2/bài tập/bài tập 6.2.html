@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.</title>
+</head>
+<body>
+<script>
+    let array = [  'c', 's', 'c', '2', '6', '1'];
+    let fist = 0;
+    let last = array.length-1;
+    document.write("Chuỗi ban đầu: " + array + "<br>");
+    while (fist<last){
+        let b = array[fist];
+        array[fist]= array[last];
+        array[last]=b
+        fist++;
+        last--;
+    }
+
+    document.write("Chuỗi mới: " + array);
+</script>
+
+</body>
+</html>

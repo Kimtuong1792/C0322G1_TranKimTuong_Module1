@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo từ điển đơn giản</title>
+</head>
+<body>
+<input type="text" id="test">
+<button onclick="trans()">Translation</button>
+<script>
+    let eng = ["tea", "milk", "black", "red", "world", "spring", "water"];
+    let vietnamese = ["trà", "sữa", "đen", "đỏ", "thế giới", "mùa xuân", "nước"];
+    let flag = true;
+    function trans() {
+        let word = document.getElementById("test").value;
+        for (let i = 0; i < eng.length; i++) {
+            if (word === eng[i]) {
+                document.write(vietnamese[i]);
+                break;
+            } else if (word === vietnamese[i]) {
+                document.write(eng[i]);
+                break;
+            } else {
+                flag = false;
+            }
+        }
+        if(flag === true){
+            alert("không tìm thấy");
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

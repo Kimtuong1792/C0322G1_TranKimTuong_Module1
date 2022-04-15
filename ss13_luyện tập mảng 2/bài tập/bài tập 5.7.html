@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xoá phần tử khỏi mảng</title>
+</head>
+<body>
+<script>
+    let Array1 = [ 11,22,33,44,55,66,77,88,99];
+    let V = parseInt(prompt("nhập số cần kiểm tra"));
+    document.write(" Mảng ban đầu : " + Array1 + "<br>")
+
+    for (let i = 0; i < Array1.length; i++) {
+        if (Array1[i] === V) {
+            for (let x = i ; x < Array1.length;x++){
+            Array1[x] = Array1[x + 1];
+            }Array1[Array1.length -1 ] = 0;
+
+            document.write(" Mảng mới :"+ Array1)
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình để đếm số từ trong một chuỗi</title>
+</head>
+<body>
+ <script>
+     let doc = 'ice,hot,cold,big,small,nice';
+     let count = 1;
+     document.write("Ký tự trong chuỗi : "+doc)
+     for (let i= 0; i< doc.length; i++){
+         if(doc[i]=== "," && doc[i+1]!==" ")
+         //document.write("Ký tự trong chuỗi " +doc[i]);
+         count++;
+     }document.write("<br>"+" Số ký tự trong chuỗi là " + count)
+ </script>
+</body>
+</html>

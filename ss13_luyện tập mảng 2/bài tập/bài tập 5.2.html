@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số lớn nhất</title>
+</head>
+<body>
+<script>
+    let number = [13,36,7,24,8,10,11,39,26,5,18];
+    let max = number[0]
+    let index = 0
+    for (let i=0; i< number.length;i++){
+        if(number[i]>max){
+            max = number[i]
+            index = i
+        }
+    }document.write("Giá trị lớn nhất là " + max + "<br>")
+    document.write(" Ở vị trí số " + index)
+
+</script>
+
+</body>
+</html>

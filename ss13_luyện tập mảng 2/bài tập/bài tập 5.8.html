@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</title>
+</head>
+<body>
+<script>
+    let Array = [3, 5, 2, 6, 9, 4, 8, 7, 1, 10];
+    document.write("Mảng ban đầu " + Array + "<br>")
+    for (let i = 0; i < Array.length; i++) {
+        for (let s = 0; s <= i; s++) {
+            if (Array[i] > Array[s]) {
+                let b = Array[i]
+                Array[i] = Array[s]
+                Array[s] = b
+            }
+        }
+    }
+    document.write(" Mảng mới " + Array)
+</script>
+</body>
+</html>
