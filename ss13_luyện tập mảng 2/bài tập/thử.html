@@ -6,30 +6,20 @@
 </head>
 <body>
 <script>
-    let n = 4
-    let a = []
-    let b = []
-    let c = []
-    for (let i = 0; i < n; i++) {
-        a.push(parseInt(prompt("nhập phần tử mảng a")))
-
-    } for (let i = 0; i < n; i++) {
-
-        b.push(parseInt(prompt("nhập phần tử mảng b")))
-    }
-
+    let a = ["C","-","O","-","D","-","E","-","G","-","Y","-","M"];
+    document.write("Mảng ban đầu: ");
     for (let i = 0; i < a.length; i++) {
-        c.push(a[i]);
-
+        document.write(a[i]);
     }
-
-    for (let j = 0; j < b.length; j++) {
-        c.push(b[j]);
-
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] === "-")
+        {
+            a[i] = "_";
+        }
     }
-    document.write(c);
-
-
+    document.write("<br>Mảng lúc sau: ");
+    for (let i = 0; i < a.length; i++) {
+        document.write(a[i]);
+    }
 </script>
-</body>
 </html>
