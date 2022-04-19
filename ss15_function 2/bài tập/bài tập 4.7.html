@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</title>
+</head>
+<body>
+<script>
+    function changePlaces(a,b){
+        let c = b
+        b = a
+        a = c
+       alert("hai số sau khi đổi chỗ là : " + a +" và " + b)
+
+    }
+    let x = parseInt(prompt("nhập vào số đầu tiên"));
+    let y =parseInt(prompt("nhập vào số thứ hai "))
+    changePlaces(x,y)
+</script>
+
+</body>
+</html>

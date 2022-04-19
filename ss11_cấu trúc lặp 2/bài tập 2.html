@@ -6,24 +6,82 @@
 </head>
 <body>
 <script>
-    let number = parseInt(prompt("nhập giá trị cần kiểm tra"));
-    let count1 = 0
-    let n = 2
-    while (count1 < number){
-        let count=0
-        for(i=n;i>0;i--)
-            if(n%i==0){
-                count++
+    //let number = parseInt(prompt("nhập giá trị cần kiểm tra"));
+    //let count1 = 0
+    //let n = 2
+    // while (count1 < number){
+    //let count=0
+    //for(i=n;i>0;i--)
+    // if(n%i==0){
+    //    count++
+    // }
+    //if (count==2){
+    // document.write( n + "<br>")
+    // count1++}
+    // n++
+
+
+    //}
+</script>
+<script>
+    // searchSnt(100);
+
+    // searchSntFromTo(100, 1000);
+
+    let soA = 7;
+    let ktSnt = isSnt(soA);
+
+    if (ktSnt === true) {
+        document.write("So NT : " + soA);
+    } else {
+        document.write("Không phai SNT " + soA);
+    }
+
+    function searchSnt(numSnt){
+        let number = 2;
+        let count = 0;
+        while (count < numSnt) {
+            let flag = true;
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    flag = false;
+                    break;
+                }
             }
-        if (count==2){
-            document.write( n + "<br>")
-            count1++}
-            n++
+            if (flag === true) {
+                count++
+                document.write("So thư tu " + count +" :"+ number + "<br>")
+            }
+            number++
+        }
+    }
 
+    function searchSntFromTo(fromNum, toNum) {
 
+        for (let i = fromNum; i <= toNum ; i++) {
+            let sntFlg = true;
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    sntFlg = false;
+                    break;
+                }
+            }
+            if (sntFlg === true) {
+                document.write("So NT : "+ i + "<br>");
+            }
+        }
+    }
 
+    function isSnt(num) {
+
+        for (let j = 2; j < num; j++) {
+            if (num % j === 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 </script>
-
 </body>
 </html>

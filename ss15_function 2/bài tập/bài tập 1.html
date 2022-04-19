@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số nguyên tố dưới 10000</title>
+</head>
+<body>
+<script>
+    isPrime(10000);
+
+    function isPrime(number) {
+
+        for (let i = 2; i < number ; i++) {
+            let sntFlg = true;
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    sntFlg = false;
+                    break;
+                }
+            }
+            if (sntFlg === true) {
+                document.write("So NT : "+ i + "<br>");
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

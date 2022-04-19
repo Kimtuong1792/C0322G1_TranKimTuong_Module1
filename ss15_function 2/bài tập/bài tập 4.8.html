@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function reverse(number){
+        let fist = 0;
+        let last = number.length-1;
+        while (fist<last){
+            let b = number[fist];
+            number[fist]= number[last];
+            number[last]=b
+            fist++;
+            last--;
+        }return (number)
+    }
+    let array1 = [4,7,5,7,2,4,8,9,0]
+    document.write("Chuỗi ban đầu : " + array1 + "<br>")
+    document.write("Chuỗi mới : " + reverse(array1))
+
+</script>
+
+</body>
+</html>

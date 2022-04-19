@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    let a=5
-    function func1(a){
-        if(a == 2)
-            return 2;
-        return a * func1(a - 1);
+    function square(x){
+        x = x * x ;
+        return x;
     }
-func1(a)
-    console.log()
+    let s = 9
+    square(s)
+    alert(square(s))
 </script>
+
 </body>
 </html>

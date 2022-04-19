@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</title>
+</head>
+<body>
+<script>
+
+    function minNunber(a,b,c){
+         min = a
+        if(b<min){
+             min = b
+        }else if( c< min){
+            min = c
+        }return min;
+    }
+    let x = parseInt(prompt("Nhập số đầu tiên"));
+    let y = parseInt(prompt("Nhập số thứ 2"))
+    let z = parseInt(prompt("Nhập số thứ 3"))
+    alert(" Số nhỏ nhất là : "+ minNunber(x,y,z))
+</script>
+
+</body>
+</html>

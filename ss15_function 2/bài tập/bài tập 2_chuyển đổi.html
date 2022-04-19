@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label> chuyển đổi foot to meter</label><br>
+<input  type="number" placeholder="input foot"
+        oninput="footToMeter(this.value)"
+       onchange="footToMeter(this.value)" >
+<br>
+<span id="ketqua">result</span><br><br>
+<label>chuyển đổi meter to foot</label><br>
+<input type="number" placeholder="input meter"
+       oninput="meterToFoot(this.value)"
+       onchange="meterToFoot(this.value)" ><br>
+<span id="KQ">result</span>
+<script>
+    function footToMeter(foot){
+        foot=parseFloat(foot)
+        document.getElementById("ketqua").innerHTML=0.305*foot
+    }
+    function meterToFoot(meter){
+        meter= parseFloat(meter)
+        document.getElementById("KQ").innerHTML=3.279 * meter
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input">
+<button onclick="tran()">change</button>
+<script>
+    let array1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let array2 = ["Ursa Minor", "Tarurus", "Cygnus", " Lyra", "Aquila", "Ursa Major", "Leo"]
+
+    function tran() {
+        a = document.getElementById("input").value;
+        for (i = 0; i < array1.length; i++) {
+            if (a === array1[i]) {
+                alert(array2[i]);
+                break;
+            } else if (a === array2[i]) {
+                alert(array1[i]);
+                break;
+            }
+        }alert("không tìm thấy");
+
+    }
+
+</script>
+
+</body>
+</html>
