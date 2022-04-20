@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor( long,width) {
+            this.long = long;
+            this.width = width;
+            this.hopThuDen = [];
+        }
+        getAcreage(){
+            return this.long * this.width;
+        }
+        getPerimeter(){
+            return (this.long + this.width)*2;
+        }
+
+    }
+    let rectangle = new Rectangle(4,5);
+    let acreage = rectangle.getAcreage();
+    let perimeter = rectangle.getPerimeter()
+    alert("acreage: " + acreage + "; perimeter: " + perimeter);
+</script>
+</body>
+</html>

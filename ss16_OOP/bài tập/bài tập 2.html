@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(poison) {
+            this.poison = poison;
+        }
+        getFahrenheit (){
+          return 1.8* this.poison +32;
+        }
+        getKenvin (){
+            return this.poison + 273,15;
+        }
+    }
+    let temperature = new Temperature (25);
+    let F = temperature.getFahrenheit();
+    let K = temperature.getKenvin()
+    alert( " độ F : " + F + " ; độ K : " + K)
+</script>
+</body>
+</html>
