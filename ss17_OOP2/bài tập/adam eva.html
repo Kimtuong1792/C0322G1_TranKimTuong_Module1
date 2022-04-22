@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Apple {
+    constructor(weight) {
+      this.weight = weight;
+    }
+    setWeight(weight){
+      this.weight = weight;
+    }
+    getWeight(){
+      return this.weight;
+    }
+    decreaseWeight(){
+      if (this.weight > 0) {
+        this.weight--;
+      }
+    }
+  }
+  class Human {
+      constructor(name,say,weights) {
+          this.name = name;
+          this.say = say;
+          this.weights = weights;
+      }
+      getWeights(){
+          return this.weights
+      }
+      setApple(apple){
+          this.apple=apple;
+      }
+      getAppleInf(){
+          return this.apple.getWeight()
+      }
+      biteOne(){
+          if (this.status){
+              this.weights ++;
+              document.write(this.name+ this.say + '<br>');
+
+          }
+      }
+     biteApple=function () {
+          this.status = true;
+          return this.apple.decreaseWeight();
+      };
+
+  }
+  let adam = new Human('Adam',' say "give me"',50);
+  let eva = new Human('Eva',' say "give me"',45);
+  let apple = new Apple();
+  apple.setWeight(6);
+  adam.setApple(apple);
+  eva.setApple(apple);
+  for (let i=0;i<3;i++){
+      eva.biteApple();
+      eva.biteOne();
+      document.write('cân nặng của Eva: '+ eva.getWeights()+'.'+' quả táo còn : '+eva.getAppleInf()+ "miếng"+'<br>');
+      adam.biteApple();
+      adam.biteOne();
+      document.write('cân nặng của Adam: '+ adam.getWeights()+'.'+'quả táo còn : '+adam.getAppleInf()+ "miếng"+'<br>');
+  }
+
+</script>
+
+</body>
+</html>

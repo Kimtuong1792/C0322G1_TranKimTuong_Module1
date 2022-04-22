@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class SwitchButton{
+        status = true; // true : bac ; false : tắt
+        lamp = new ElectricLamp();
+
+        constructor() {
+            if (this.status === true) { // dang bậc
+                this.status = false; // => tắt
+            } else {
+                this.status = true; // => bật
+            }
+
+        }
+        connectToLamp(bongden){
+           this.lamp= bongden;
+        }
+        switchOff(){
+            this.status = false;
+            this.lamp.turnOff();
+        }
+        switchOn(){
+            this.status = true;
+            this.lamp.turnOn();
+        }
+    }
+    class ElectricLamp{
+        status = true;
+        ElectricLamp() {
+
+        }
+        turnOff(){
+           this.status = false;
+        }
+        turnOn(){
+            this.status = true;
+        }
+    }
+
+    let congtac = new SwitchButton();
+    let bongden1 = new ElectricLamp();
+
+    alert(bongden1.status);
+
+    congtac.connectToLamp(bongden1);
+    congtac.SwitchButton();
+
+    if (bongden1.status === true) {
+        alert('đèn đang bật');
+    } else {
+        alert('đèn đang tắt');
+    }
+
+    // let bongden = new ElectricLamp(false);
+    // congtac.connectToLamp(bongden)
+    // for(let i=0;i<5;i++) {
+    //     congtac.switchOn();
+    //     if(bongden.status=== true) {
+    //         alert('đèn đang bật')
+    //     }
+    //     congtac.switchOff();
+    //     if(bongden.status=== false) {
+    //         alert('đèn đang tắt')
+    //     }
+    //
+    // }
+</script>
+
+</body>
+</html>

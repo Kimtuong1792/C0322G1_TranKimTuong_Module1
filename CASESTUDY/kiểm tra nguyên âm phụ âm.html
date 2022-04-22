@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let vowel = ['o', 'u', 'i', 'a', 'e','O', 'U', 'I', 'A', 'E' ]
+    let n = prompt("nhập ký tự cần kiểm tra")
+    let flag= false
+            for(let j = 0 ; j< vowel.length;j++){
+            if(n === vowel[j]){
+                flag=true
+                break;
+            }
+            }
+            if (flag) {
+                alert("snguyên âm")
+            } else {
+                alert("ko phải")
+            }
+
+</script>
+
+</body>
+</html>

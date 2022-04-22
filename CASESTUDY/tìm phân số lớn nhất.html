@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [3,5,6,7,8];
+    let denominators = [ 6,4,4,9,9];
+    let max = numerators[0]/denominators[0];
+    let id = 0
+    for(let i = 1; i<numerators.length;i++){
+        if((numerators[i]/denominators[i])>max){
+            max = numerators[i]/denominators[i];
+            id = i;
+        }
+    }
+    alert("giá trị lớn nhất là: " +max +" ; ở vị trí số: " +id);
+
+</script>
+</body>
+</html>

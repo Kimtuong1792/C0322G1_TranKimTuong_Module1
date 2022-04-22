@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let incom = parseInt(prompt("nhập vào số lương bạn nhận"))
+    let tax ;
+    let salary;
+
+    if (incom<7){
+        tax = incom*(5/100);
+        salary = incom - tax;
+    }else if(incom<15){
+        tax = incom*(10/100);
+        salary = incom - tax;
+    }else if( incom >= 15){
+        tax = incom*(20/100);
+        salary = incom - tax;
+    }
+    alert("thuế bạn phải nộp là : " + tax + " triệu ")
+    alert("Lương ròng bạn được nhận là " + salary + " triệu")
+</script>
+</body>
+</html>
