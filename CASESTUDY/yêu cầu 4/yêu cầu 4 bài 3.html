@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    let s2 = "adcba";
+    let count = 0;
+    for (let i = 0; i < s1.length; i++) {
+        for (let j = 0; j < s2.length; j++) {
+            if(s1[i]===s2[j]){
+                document.write(s1[i]);
+                s2 = s2.replace(s2[j],"");
+                count++;
+                break;
+            }
+        }
+    }document.write("<br> Số ký tự trùng :"  + count);
+
+</script>
+
+</body>
+</html>

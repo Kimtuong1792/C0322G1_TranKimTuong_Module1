@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuẩn hoá xâu ký tự</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập xâu ký tự muốn chuẩn hoá");
+    let b = [];
+    let str1 = [];
+    b = a.toLowerCase().split(" ");
+    document.write(' ' + b + '<br>')
+    function capital(str) {
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < str[i].length; j++) {
+                if (j === 0) {
+                    x = str[i][0].toUpperCase();
+                    str1.push(" ");
+                    str1.push(x);
+                    continue;
+                }
+                str1.push(str[i][j]);
+            }
+        }
+    }
+    function longest(str) {
+        let max = str[0].length;
+        let index = 0;
+        for (let i = 1; i < str.length; i++) {
+            if (str[i].length > max) {
+                max = str[i].length;
+                index = i;
+            }
+        }
+        document.write('<br>' + "Từ dài nhất trong xâu : " + str[index])
+    }
+    capital(b)
+    document.write(str1.join(""))
+    longest(b)
+
+
+</script>
+
+</body>
+</html>

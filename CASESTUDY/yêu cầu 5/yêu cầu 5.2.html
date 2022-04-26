@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let str1 = [
+        [1, 2, 3, 4],
+        [3, 2, 5, 6],
+        [6, 8, 11, 13]
+    ]
+    for (let i = 0; i < str1.length; i++) {
+        for (let j = 0; j < str1[i].length; j++) {
+            if (str1[i][j] >= 2) {
+                let flag = true
+                for (let k = 2; k < str1[i][j]; k++) {
+                    if (str1[i][j] % k === 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag === true) {
+                    document.write("So NT : " + str1[i][j] + "<br>");
+                }
+            }
+
+        }
+    }
+</script>
+</body>
+</html>
