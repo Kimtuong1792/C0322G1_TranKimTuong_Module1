@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MÔ TẢ HÌNH TRÒN</title>
+</head>
+<body>
+<script>
+    class Circle{
+        constructor(x,y,radius,color) {
+            this._x = x;
+            this._y = y;
+            this._radius = radius;
+            this._color = color;
+        }
+        getX(){
+            return this._x;
+        }
+        setX(value){
+            this._x = value;
+        }
+        getY(){
+            return this._y;
+        }
+        setY(value){
+            this._y = value;
+        }
+        getRadius(){
+            return this._radius;
+        }
+        setRadius(value){
+            this._radius = value;
+        }
+        getColor(){
+            return this._color;
+        }
+        setColor(value){
+            this._color = value;
+        }
+    }
+    let x = parseInt(prompt(" nhập vào toạ độ X"));
+    let y = parseInt(prompt("nhập vào toạ độ y"))
+    let radius = parseInt(prompt("nhập vào bán kính"))
+    let color = prompt("nhập vào màu cần vẻ")
+    let circle = new Circle(x,y,radius,color);
+
+
+</script>
+</body>
+</html>

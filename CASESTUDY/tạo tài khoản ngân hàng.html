@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="bang.css">
+
+
+</head>
+<body>
+<h1 align="center">Danh sách tài khoản ngân hàng</h1>
+<div>
+  <button id="add" onclick="create()">Create new Account</button>
+</div>
+<p id="display"></p>
+<script>
+  class Account {
+    constructor(code, name, bank , money) {
+      this._code = code;
+      this._name = name;
+      this._bank = bank;
+      this._money = money;
+    }
+    getCode() {
+      return this._code;
+    }
+
+    setCode(value) {
+      this._code = value;
+    }
+
+    getName() {
+      return this._name;
+    }
+
+    setName(value) {
+      this._name = value;
+    }
+
+    getBank() {
+      return this._bank;
+    }
+
+    setBank(value) {
+      this._bank = value;
+    }
+    getMoney() {
+      return this._money;
+    }
+
+    setMoney(value) {
+      this._money = value;
+    }
+  }
+  let arrAccount = [];
+  function display(arr) {
+    let sout = "<table border='1px'>\n" +
+            "    <tr>" +
+            "        <th>STT</th>" +
+            "        <th>Code</th>\n" +
+            "        <th>Name</th>\n" +
+            "        <th>Bank</th>" +
+            "        <th>money</th>" +
+            "        <th>Action</th>" +
+            "    </tr>";
+    for (let i = 0; i < arr.length; i++) {
+      sout += "<tr>" +
+              "<td>" + (i + 1) + "</td>" +
+              "<td>" + arr[i].getCode() + "</td>" +
+              "<td>" + arr[i].getName() + "</td>" +
+              "<td>" + arr[i].getBank() + "</td>" +
+              "<td>" + arr[i].getMoney() + "</td>" +
+              "<td>" +
+              "<button onclick='edit(" + i + ")'>Update</button>" +
+              "</td>" +
+              "</tr>"
+    }
+    sout += "</table>";
+    document.getElementById("display").innerHTML = sout;
+  }
+  display(arrAccount);
+  // tạo mới đối tượng.
+  function create() {
+    let code = prompt("Nhập code : ");
+    let name = prompt("Nhập tên của bạn: ");
+    let bank = prompt("Nhập ngân hàng : ");
+    let money = prompt("Nhập tổng tiền: ");
+    let newAccount = new Account(code , name , bank , money);
+    arrAccount.push(newAccount);
+    display(arrAccount);
+    alert("Thêm mới thành công.");
+  }
+  function edit(kha) {
+    let code = prompt("Nhập code : ");
+    let name = prompt("Nhập tên của bạn: ");
+    let bank = prompt("Nhập ngân hàng : ");
+    let money = prompt("Nhập tổng tiền: ");
+    arrAccount[kha] = new Account(code , name , bank , money);
+    alert("Sửa thông tin đối tượng thành công");
+    display(arrAccount);
+  }
+</script>
+</body>
+</html>

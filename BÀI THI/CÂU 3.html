@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let num = 22;
+    let n1 = 0;
+    let n2 = 1;
+    let nextnum;
+    let array = [];
+    for (let i = 1; i <= num; i++) {
+        array.push(n1);
+
+        nextnum = n1 + n2;
+        n1 = n2;
+        n2 = nextnum;
+    }
+    document.writeln("dãy số fibonacci : { " + array + " }" + "<br>")
+
+
+    function isFibonacci(arr) {
+        let number = parseInt(prompt("nhập vào số nguyên cần kiểm tra"));
+        if (number > 10000 || isNaN(number)) {
+            alert("vui lòng nhập lại số nhỏ hơn 10000 và là số nguyên");
+        }
+
+
+        let flag = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === number) {
+                flag = true;
+                document.write(number + " là số trong dãy fibonacci");
+                break;
+
+            }
+
+
+        }
+        if (!flag) document.write(number + " ko phải số trong dãy Fibonacci" + "<br>");
+    }
+
+
+    isFibonacci(array)
+</script>
+
+</body>
+</html>

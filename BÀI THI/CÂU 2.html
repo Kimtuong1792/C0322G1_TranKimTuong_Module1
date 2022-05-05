@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÌM VÀ XOÁ X TRONG MẢNG SỐ NGUYÊN</title>
+</head>
+<body>
+<script>
+    let number = [];
+    for (let i = 0; i < 10; i++) {
+        let num = parseInt(prompt("nhập vào số nguyên "));
+        if (isNaN(num)) {
+            alert("nhập lại");
+            continue;
+        }
+        number.push(num);
+    }
+    document.write(" mảng ban đầu : " + number + "<br>");
+
+    function tryRemoveFromArray(arr) {
+        let x = parseInt(prompt("nhập vào số nguyên cần tìm"))
+        let arr1 = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== x) {
+                arr1.push(arr[i]);
+            }
+        }
+        document.write("mảng sau khi đã duyệt: " + arr1);
+    }
+
+    tryRemoveFromArray(number);
+</script>
+</body>
+</html>

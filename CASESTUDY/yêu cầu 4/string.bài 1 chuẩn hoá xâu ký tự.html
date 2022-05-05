@@ -7,15 +7,14 @@
 <body>
 <script>
     let a = prompt("nhập xâu ký tự muốn chuẩn hoá");
-    let b = [];
     let str1 = [];
-    b = a.toLowerCase().split(" ");
-    document.write(' ' + b + '<br>')
+    let b = a.toLowerCase().split(" ");
+    document.write(' ' + b + '<br>');
     function capital(str) {
         for (let i = 0; i < str.length; i++) {
             for (let j = 0; j < str[i].length; j++) {
                 if (j === 0) {
-                    x = str[i][0].toUpperCase();
+                    let x = str[i][0].toUpperCase();
                     str1.push(" ");
                     str1.push(x);
                     continue;
@@ -33,11 +32,11 @@
                 index = i;
             }
         }
-        document.write('<br>' + "Từ dài nhất trong xâu : " + str[index])
+        document.write('<br>' + "Từ dài nhất trong xâu : " + str[index]);
     }
-    capital(b)
-    document.write(str1.join(""))
-    longest(b)
+    capital(b);
+    document.write(str1.join(""));
+    longest(b);
 
 
 </script>

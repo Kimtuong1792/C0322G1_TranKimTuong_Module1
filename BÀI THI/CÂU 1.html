@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÌM ĐIỂM THI CAO NHẤT</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i < 10; i++) {
+        let diem = parseInt(prompt("nhập vào điểm thi"));
+        if (diem < 0 || diem >= 100 || isNaN(diem)) {
+            alert("số điểm vừa nhập không đúng ")
+            continue;
+        }
+        array.push(diem);
+    }
+
+    function findMax(arr) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        document.write("điểm thi cao nhất là : " + max);
+    }
+
+    findMax(array);
+
+</script>
+</body>
+</html>
